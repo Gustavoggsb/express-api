@@ -1,0 +1,12 @@
+POST http://express-api-cwl.herokuapp.com/api/v1/users
+Content-Type: application/json
+
+{
+    "name": "Arthur Morgan",
+    "birthDate": "1863-10-31T00:00:00Z",
+    "cellphone": "+(x)(xxx)xxx-xxxx",
+    "phone": "+(x)(xxx)xxx-xxxx",
+    "email": "arthurmorgan@xxxx.com",
+    "occupation": "outlaw",
+    "state": "Nevada"
+}

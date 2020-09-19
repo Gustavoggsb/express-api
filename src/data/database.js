@@ -1,9 +1,11 @@
 const mongoose = require("mongoose");
+require ('dotenv/config')
 
 const url = process.env.DATABASE_URL
 
 module.exports = {
     connect: async () => {
+        console.log(url)
         try {
             await mongoose.connect(url, {
                 useNewUrlParser: true,
@@ -15,7 +17,7 @@ module.exports = {
             process.exit(1);
         }
     },
-    customerWallets: mongoose.model("customerWallets", {
+    users: mongoose.model("User", {
         _id: String,
         name: String,
         birthDate: String,
