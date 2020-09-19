@@ -31,9 +31,9 @@ module.exports = app => {
 
     controller.removeUser = async (req, res) => {
 
-        const { customerId } = req.params;
+        const { Id } = req.params;
         try {
-            await database.users.findByIdAndDelete(customerId)
+            await database.users.findByIdAndDelete(Id)
             res.status(200).json({
                 message: 'Usuário encontrado e deletado com sucesso!',
                 success: true,
@@ -50,8 +50,8 @@ module.exports = app => {
 
     controller.updateUser = async (req, res) => {
         
-        const { customerId } = req.params;
-        let user = await database.users.findById(customerId)
+        const { Id } = req.params;
+        let user = await database.users.findById(Id)
         
         if (user) {
 
