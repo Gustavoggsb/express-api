@@ -24,7 +24,7 @@ module.exports = app => {
         user.occupation = req.body.occupation;
         user.state = req.body.state;
 
-        await users.save()
+        await user.save()
 
         res.status(201).json(users);
     }

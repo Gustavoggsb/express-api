@@ -17,7 +17,7 @@ module.exports = {
             process.exit(1);
         }
     },
-    users: mongoose.model("User", {
+    users: mongoose.model("users", {
         _id: String,
         name: String,
         birthDate: String,
